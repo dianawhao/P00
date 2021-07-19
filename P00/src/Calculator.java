@@ -2,9 +2,13 @@
 public class Calculator {
 	public int add (int a, int b) {
 
+
 		return a + b;
 				
-		//hello, i am with w65E
+		//hello, i am with w65E_
+
+
+		
 
 	}
 	public int subtract (int a, int b) {
@@ -12,8 +16,7 @@ public class Calculator {
 		
 	}
 	
-
-	public int multiply(int a, int b) {
+	public int multiple (int a, int b) {
 		return a * b;
 		
 	}
@@ -26,5 +29,6 @@ public class Calculator {
 			  return a / b;
 	 }
 
+	
 }
 
