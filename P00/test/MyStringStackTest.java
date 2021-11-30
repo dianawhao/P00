@@ -40,8 +40,10 @@ public class MyStringStackTest {
 			o1= stack.pop();
 			fail();			
 		}catch (IndexOutOfBoundsException e) {}		
+		// after push an element, the stack shall not be empty
 		stack.push(s1);
 		assertFalse("Stack should not be empty after push", stack.isEmpty());
+		// push then pop, the element shall be same. and the stack is empty
 		try {
 			o1= stack.pop();			
 		}catch (IndexOutOfBoundsException e) {
@@ -54,6 +56,7 @@ public class MyStringStackTest {
 	public void testIsEmpty(){
 		String s3 = null;
 		assertTrue(stack.isEmpty());
+		// after push an element, the stack shall not be empty
 		stack.push(s1);
 		assertFalse(stack.isEmpty());	
 		try{
@@ -61,6 +64,7 @@ public class MyStringStackTest {
 		}catch (IndexOutOfBoundsException e){
 			fail();
 		}
+		// push then pop, the element shall be same. and the stack is empty
 		assertSame(s1, s3);
 		assertTrue(stack.isEmpty());
 	}
@@ -73,6 +77,7 @@ public class MyStringStackTest {
 		stack.push(s2);
 		assertFalse("stack should not be empty",stack.isEmpty());
 		stack.clear();
+		// push two element then clear the stack, it should be empty
 		assertTrue(stack.isEmpty());
 		try{
 			o1= stack.pop();
