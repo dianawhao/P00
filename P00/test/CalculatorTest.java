@@ -12,29 +12,22 @@ public class CalculatorTest {
 	public static void setUpBeforeClass() throws Exception {
 	}
 
-	@AfterClass
-	public static void tearDownAfterClass() throws Exception {
-	}
 
 	@Before
 	public void setUp() throws Exception {
 	}
 
-	
-	@After
-	public void tearDown() throws Exception {
-	}
 
 	@Test
 	public void testAdd() {
 		//fail("Not yet implemented");
-		int a = 1234;
+		int a = 4321;
 		int b = 1234;
 		
 		 Calculator cal = new Calculator();
 		 int actual = cal.add(a, b); //returns 9999
 		 
-		 int expected = 2468;
+		 int expected = 5555;
 		 assertEquals (expected,actual);
 	}
 	
@@ -62,11 +55,11 @@ public class CalculatorTest {
 	@Test
 	public void testDivideWithNon0Denominator () {
 		//fail("Not yet implemented");
-		int a = 0;
+		int a = 6666;
 		int b = 3333;
 		 Calculator cal = new Calculator();
 		 int actual = cal.divide(a, b);
-		 int expected = 0;
+		 int expected = 3;
 		 assertEquals (expected,actual);
 	}
 	
@@ -85,5 +78,11 @@ public class CalculatorTest {
 				  assertEquals( "Expected an IllegalArgumentException to be thrown", t.getMessage());
 			  }
 	}
-
+	@AfterClass
+	public static void tearDownAfterClass() throws Exception {
+	}
+	
+	@After
+	public void tearDown() throws Exception {
+	}
 }
