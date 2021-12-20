@@ -5,7 +5,7 @@ public class HelloWorld {
 
 	public static void main(String[] args) {
 
-		
+		//update GitHub PAT: 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
 		Scanner input = new Scanner(System.in);
 		System.out.print("Enter the licensePlate: ");
         String myString = input.next().toUpperCase();
