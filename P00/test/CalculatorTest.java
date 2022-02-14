@@ -59,7 +59,7 @@ public class CalculatorTest {
 		int b = 3333;
 		 Calculator cal = new Calculator();
 		 int actual = cal.divide(a, b);
-		 int expected = 3;
+		 int expected = 2;
 		 assertEquals (expected,actual);
 	}
 	
