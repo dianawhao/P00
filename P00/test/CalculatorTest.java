@@ -24,11 +24,11 @@ public class CalculatorTest {
 		int a = 4321;
 		int b = 1234;
 		
-		 Calculator cal = new Calculator();
-		 int actual = cal.add(a, b); //returns 9999
+		Calculator cal = new Calculator();
+		int actual = cal.add(a, b); 
 		 
-		 int expected = 5555;
-		 assertEquals (expected,actual);
+		int expected = 5555;
+		assertEquals (expected, actual);
 	}
 	
 	@Test
@@ -46,6 +46,16 @@ public class CalculatorTest {
 	public void testMultiply() {
 		//fail("Not yet implemented");
 		int a = 9876;
+		int b = 1234;
+		 Calculator cal = new Calculator();
+		 int actual = cal.multiply(a, b);
+		 int expected = 12186984;
+		 assertEquals (expected,actual);
+	}
+	@Test
+	public void testMultiplyWith0() {
+		//fail("Not yet implemented");
+		int a = 5555;
 		int b = 0;
 		 Calculator cal = new Calculator();
 		 int actual = cal.multiply(a, b);
@@ -86,3 +96,5 @@ public class CalculatorTest {
 	public void tearDown() throws Exception {
 	}
 }
+
+
