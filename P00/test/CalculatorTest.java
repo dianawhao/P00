@@ -5,28 +5,38 @@ import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import java.util.ArrayList;
 
 public class CalculatorTest {
-
+	 private int a, b, c;
+	
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
+
 	}
 
 
 	@Before
 	public void setUp() throws Exception {
-	}
 
+		a = 4321;
+		b = 1234;
+		c = 0;
+		
+	}
+	
 
 	@Test
 	public void testAdd() {
-		//fail("Not yet implemented");
-		int a = 4321;
-		int b = 1234;
-		
+		// Arrange
+		a = 4321;
+		b = 1234;
 		Calculator cal = new Calculator();
+		
+		//Act
 		int actual = cal.add(a, b); 
-		 
+		
+		//Assert
 		int expected = 5555;
 		assertEquals (expected, actual);
 	}
@@ -34,59 +44,70 @@ public class CalculatorTest {
 	@Test
 	public void testSubtract() {
 		//fail("Not yet implemented");
-		int a = 9876;
-		int b = 4321;
+
 		 Calculator cal = new Calculator();
 		 int actual = cal.subtract(a, b);
-		 int expected = 5555;
+		 int expected = 3087;
 		 assertEquals (expected,actual);
 	}
 	
 	@Test
 	public void testMultiply() {
 		//fail("Not yet implemented");
-		int a = 9876;
-		int b = 1234;
+
 		 Calculator cal = new Calculator();
 		 int actual = cal.multiply(a, b);
-		 int expected = 12186984;
+		 int expected = 5332114;
 		 assertEquals (expected,actual);
 	}
 	@Test
 	public void testMultiplyWith0() {
 		//fail("Not yet implemented");
-		int a = 5555;
-		int b = 0;
+
 		 Calculator cal = new Calculator();
-		 int actual = cal.multiply(a, b);
+		 int actual = cal.multiply(a, c);
 		 int expected = 0;
 		 assertEquals (expected,actual);
 	}
 	@Test
 	public void testDivideWithNon0Denominator () {
 		//fail("Not yet implemented");
-		int a = 6666;
-		int b = 3333;
+
 		 Calculator cal = new Calculator();
 		 int actual = cal.divide(a, b);
-		 int expected = 2;
+		 int expected = 3;
 		 assertEquals (expected,actual);
 	}
 	
 	@Test
 	public void testDivideWith0Denominator () {
 		//fail("Not yet implemented");
-		int a = 3333;
-		int b = 0;
+
 		 try {
 			 Calculator cal = new Calculator();
-			 cal.divide(a, b);
+			 cal.divide(a, c);
 			 fail("Expected an IllegalArgumentException to be thrown");
 			  }catch(IllegalArgumentException e) {
 				  assertEquals("Division by zero is not supported", e.getMessage() );
 			  }catch(Throwable t) {
 				  assertEquals( "Expected an IllegalArgumentException to be thrown", t.getMessage());
 			  }
+	}
+	
+	@Test
+	public void testAddList() {
+		Calculator cal = new Calculator();
+        ArrayList<Integer> arr = new ArrayList<>();
+        arr.add(1);
+        arr.add(2);
+        arr.add(3);
+        arr.add(4);
+        arr.add(5);
+        
+		int actual = cal.addList(arr);
+		int expected = 15;
+		assertEquals (expected, actual);
+
 	}
 	@AfterClass
 	public static void tearDownAfterClass() throws Exception {

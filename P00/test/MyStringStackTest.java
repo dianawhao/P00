@@ -21,15 +21,16 @@ public class MyStringStackTest {
 	@Test
 	public void testPush(){
 		//Empty stack is still empty after pushing a null element 
-		assertTrue(stack.isEmpty());
+		// a new stack should be empty
+		assertTrue("Stack should be empty after declaration", stack.isEmpty());
+		
 		String o1 = null;
 		stack.push(o1);
-		assertTrue(stack.isEmpty());
+		assertTrue("Stack should be still empty after push a null obj", stack.isEmpty());
 		
 		//New stack is empty, after pushing an s1 element, stack is no longer empty
-		assertTrue(stack.isEmpty());
 		stack.push(s1);
-		assertFalse(stack.isEmpty());	
+		assertFalse("Stack should not be empty after push s1",stack.isEmpty());	
 	}
 	
 	@Test
@@ -42,14 +43,16 @@ public class MyStringStackTest {
 		}catch (IndexOutOfBoundsException e) {}		
 		// after push an element, the stack shall not be empty
 		stack.push(s1);
-		assertFalse("Stack should not be empty after push", stack.isEmpty());
+		assertFalse("Stack should not be empty after push s1", stack.isEmpty());
 		// push then pop, the element shall be same. and the stack is empty
 		try {
 			o1= stack.pop();			
 		}catch (IndexOutOfBoundsException e) {
 			fail();
 		}
-		assertSame (s1,o1);
+		
+		assertSame ("then pop o1 , the element shall be same just pushed s1",s1,o1);
+		
 		assertTrue(stack.isEmpty());
 	}	
 	@Test
