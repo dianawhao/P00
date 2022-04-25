@@ -14,7 +14,7 @@ public class HelloWorld {
 		boolean b = Pattern.matches("[A-Z]{3}[0-9]{4}[A-Z]", myString);
 		System.out.println("a valid license plate? " + b);
 
-		System.out.println("My First first Java Program, welcome to Nvida");
+		System.out.println("My First first Java Program, welcome to Nvida!!");
 
 	}
 	
