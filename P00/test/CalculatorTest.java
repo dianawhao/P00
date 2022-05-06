@@ -8,10 +8,9 @@ import org.junit.Test;
 import java.util.ArrayList;
 
 public class CalculatorTest {
-	private int a=4321;
-	private int b=1234;
-	private int c =0;
-	Calculator cal = new Calculator();
+	private int a, b, c;
+	Calculator cal; 
+
 	
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
@@ -20,22 +19,24 @@ public class CalculatorTest {
 
 	@Before
 	public void setUp() throws Exception {
-
-		
+		cal = new Calculator();
+		a = 4321;
+		b = 1234;
+		c = 0;
 	}
 
 	@Test
 	public void testAdd() {
 		// Arrange
-		int a = 4321;
-		int b = 1234;
+		int a = 54321;
+		int b = 12345;
 		Calculator cal = new Calculator();
 		
 		//Act
 		int actual = cal.add(a, b); 
 		
 		//Assert
-		int expected = 5555;
+		int expected = 66666;
 		assertEquals (expected, actual);
 	}
 	
@@ -44,7 +45,6 @@ public class CalculatorTest {
 	public void testSubtract() {
 		//fail("Not yet implemented");
 
-		 Calculator cal = new Calculator();
 		 int actual = cal.subtract(a, b);
 		 int expected = 3087;
 		 assertEquals (expected,actual);
@@ -54,7 +54,6 @@ public class CalculatorTest {
 	public void testMultiply() {
 		//fail("Not yet implemented");
 
-		 Calculator cal = new Calculator();
 		 int actual = cal.multiply(a, b);
 		 int expected = 5332114;
 		 assertEquals (expected,actual);
@@ -63,7 +62,6 @@ public class CalculatorTest {
 	public void testMultiplyWith0() {
 		//fail("Not yet implemented");
 
-		 Calculator cal = new Calculator();
 		 int actual = cal.multiply(a, c);
 		 int expected = 0;
 		 assertEquals (expected,actual);
@@ -72,7 +70,6 @@ public class CalculatorTest {
 	public void testDivideWithNon0Denominator () {
 		//fail("Not yet implemented");
 
-		 Calculator cal = new Calculator();
 		 int actual = cal.divide(a, b);
 		 int expected = 3;
 		 assertEquals (expected,actual);
