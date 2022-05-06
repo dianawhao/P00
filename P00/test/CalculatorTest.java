@@ -19,9 +19,9 @@ public class CalculatorTest {
 	@Before
 	public void setUp() throws Exception {
 
-		a = 4321;
-		b = 1234;
-		c = 0;
+		int a = 4321;
+		int b = 1234;
+		int c = 0;
 		
 	}
 	
@@ -29,8 +29,8 @@ public class CalculatorTest {
 	@Test
 	public void testAdd() {
 		// Arrange
-		a = 4321;
-		b = 1234;
+		int a = 4321;
+		int b = 1234;
 		Calculator cal = new Calculator();
 		
 		//Act
