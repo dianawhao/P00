@@ -8,23 +8,21 @@ import org.junit.Test;
 import java.util.ArrayList;
 
 public class CalculatorTest {
-	 private int a, b, c;
+	private int a=4321;
+	private int b=1234;
+	private int c =0;
+	Calculator cal = new Calculator();
 	
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
 
 	}
 
-
 	@Before
 	public void setUp() throws Exception {
 
-		int a = 4321;
-		int b = 1234;
-		int c = 0;
 		
 	}
-	
 
 	@Test
 	public void testAdd() {
@@ -41,6 +39,7 @@ public class CalculatorTest {
 		assertEquals (expected, actual);
 	}
 	
+
 	@Test
 	public void testSubtract() {
 		//fail("Not yet implemented");
@@ -109,12 +108,14 @@ public class CalculatorTest {
 		assertEquals (expected, actual);
 
 	}
-	@AfterClass
-	public static void tearDownAfterClass() throws Exception {
-	}
+
 	
 	@After
 	public void tearDown() throws Exception {
+	}
+	
+	@AfterClass
+	public static void tearDownAfterClass() throws Exception {
 	}
 }
 
