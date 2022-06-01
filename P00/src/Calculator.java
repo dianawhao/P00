@@ -25,6 +25,7 @@ public class Calculator {
 		return a / b;
 	 }
 	
+	
 	public int addList ( ArrayList<Integer> numbers) {
 		if(numbers == null || numbers.isEmpty()) {
 			throw new IllegalArgumentException("arraylist cannot be empty or null");

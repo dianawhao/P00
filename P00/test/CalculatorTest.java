@@ -28,15 +28,15 @@ public class CalculatorTest {
 	@Test
 	public void testAdd() {
 		// Arrange
-		int a = 54321;
-		int b = 12345;
-		Calculator cal = new Calculator();
+		//int a = 54321;
+		//int b = 12345;
+		//Calculator cal = new Calculator();
 		
 		//Act
 		int actual = cal.add(a, b); 
 		
 		//Assert
-		int expected = 66666;
+		int expected = 5555;
 		assertEquals (expected, actual);
 	}
 	
@@ -78,14 +78,14 @@ public class CalculatorTest {
 	@Test
 	public void testDivideWith0Denominator () {
 		//fail("Not yet implemented");
+		// add comments
 
-		 try {
-			 Calculator cal = new Calculator();
+		try {
 			 cal.divide(a, c);
 			 fail("Expected an IllegalArgumentException to be thrown");
-			  }catch(IllegalArgumentException e) {
+		}catch(IllegalArgumentException e) {
 				  assertEquals("Division by zero is not supported", e.getMessage() );
-			  }catch(Throwable t) {
+		}catch(Throwable t) {
 				  assertEquals( "Expected an IllegalArgumentException to be thrown", t.getMessage());
 			  }
 	}
