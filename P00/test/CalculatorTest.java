@@ -78,7 +78,6 @@ public class CalculatorTest {
 	@Test
 	public void testDivideWith0Denominator () {
 		//fail("Not yet implemented");
-		// add comments
 
 		try {
 			 cal.divide(a, c);
@@ -94,19 +93,35 @@ public class CalculatorTest {
 	public void testAddList() {
 		Calculator cal = new Calculator();
         ArrayList<Integer> arr = new ArrayList<>();
+        
         arr.add(1);
         arr.add(2);
         arr.add(3);
         arr.add(4);
         arr.add(5);
-        
+
 		int actual = cal.addList(arr);
 		int expected = 15;
 		assertEquals (expected, actual);
 
 	}
 
-	
+	@Test
+	public void testAddNullList() {
+		Calculator cal = new Calculator();
+        ArrayList<Integer> arr = new ArrayList<>();
+        arr = null;
+		try {
+			cal.addList(arr);
+			 fail("Expected an IllegalArgumentException to be thrown");
+		}catch(IllegalArgumentException e) {
+				  assertEquals("arraylist cannot be empty or null", e.getMessage() );
+		}catch(Throwable t) {
+				  assertEquals( "Expected an IllegalArgumentException to be thrown", t.getMessage());
+			  }
+
+
+	}
 	@After
 	public void tearDown() throws Exception {
 	}
